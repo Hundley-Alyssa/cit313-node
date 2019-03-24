@@ -27,9 +27,8 @@ express()
   .get('/recipetitEdit', (req, res) => res.render('pages/reviewEdit'))
   .get('/shoppingcart', (req, res) => res.render('pages/shoppingcart'))
   .get('/update_recipe', (req, res) => res.render('pages/update_recipe'))
-
-
   
+
 
   .get('/recipetitView', function(req, res) {
     var recipes = [
