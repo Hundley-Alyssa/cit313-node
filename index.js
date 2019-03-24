@@ -30,18 +30,19 @@ express()
   
 
 
-  .get('/', function(req, res) {
-    var recipes = [
-        { name: 'Fake Cookies', cookTime: 3, temp: 350, ingredients: 'testing ingredients, sugar, water, oil', instructions: 'testing instructions, cook for, etc....' },
-        { name: 'Fake Cookies2', cookTime: 3, temp: 350, ingredients: 'testing ingredients, sugar, water, oil', instructions: 'testing instructions, cook for, etc....' },
-        { name: 'Fake Cookies3', cookTime: 3, temp: 350, ingredients: 'testing ingredients, sugar, water, oil', instructions: 'testing instructions, cook for, etc....' }
-    ];
 
-    res.render('pages/homepage', {
-        recipes: recipes
+//   .get('/', function(req, res) {
+//     var recipes = [
+//         { name: 'Fake Cookies', cookTime: 3, temp: 350, ingredients: 'testing ingredients, sugar, water, oil', instructions: 'testing instructions, cook for, etc....' },
+//         { name: 'Fake Cookies2', cookTime: 3, temp: 350, ingredients: 'testing ingredients, sugar, water, oil', instructions: 'testing instructions, cook for, etc....' },
+//         { name: 'Fake Cookies3', cookTime: 3, temp: 350, ingredients: 'testing ingredients, sugar, water, oil', instructions: 'testing instructions, cook for, etc....' }
+//     ];
+
+//     res.render('pages/homepage', {
+//         recipes: recipes
        
-    });
-});
+//     });
+// });
 
   .listen(PORT, () => console.log(`Listening on ${ PORT }`))
 
