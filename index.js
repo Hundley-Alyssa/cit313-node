@@ -27,10 +27,11 @@ express()
   .get('/recipetitEdit', (req, res) => res.render('pages/reviewEdit'))
   .get('/shoppingcart', (req, res) => res.render('pages/shoppingcart'))
   .get('/update_recipe', (req, res) => res.render('pages/update_recipe'))
+
+
   
 
-
-  .get('/', function(req, res) {
+  .get('/recipetitView', function(req, res) {
     var recipes = [
         { name: 'Fake Cookies', cookTime: 3, temp: 350, ingredients: 'testing ingredients, sugar, water, oil', instructions: 'testing instructions, cook for, etc....' },
         { name: 'Fake Cookies2', cookTime: 3, temp: 350, ingredients: 'testing ingredients, sugar, water, oil', instructions: 'testing instructions, cook for, etc....' },
