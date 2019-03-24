@@ -37,6 +37,13 @@ $recipes = $stmt->fetchALL(PDO::FETCH_ASSOC);
         <h1 class="recipeHeader">Click on a recipe name to view full recipe</h1>
         
 
+        <ul>
+            <% recipes.forEach(function(recipe) { %>
+            <li><%= recipe.name %></li>
+            <% }); %>
+        </ul>
+
+
         <?php
         
                 foreach ($recipes as $recipe)

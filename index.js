@@ -16,12 +16,32 @@ express()
   .set('view engine', 'ejs')
   .get('/', (req, res) => res.render('pages/homepage'))
   .get('/recipetitAdd', (req, res) => res.render('pages/recipetitAdd'))
-  // .get('/', (req, res) => res.render('pages/recipetitCart'))
-  // .get('/', (req, res) => res.render('pages/recipetitCheckout'))
-  // .get('/', (req, res) => res.render('pages/recipetitConfirmation'))
-  // .get('/', (req, res) => res.render('pages/recipetitEdit'))
-  // .get('/', (req, res) => res.render('pages/recipetitReview'))
-  // .get('/', (req, res) => res.render('pages/recipetitReviewAdd'))
+  .get('/recipetitCart', (req, res) => res.render('pages/recipetitCart'))
+  .get('/recipetitCheckout', (req, res) => res.render('pages/recipetitCheckout'))
+  .get('/recipetitConfirmation', (req, res) => res.render('pages/recipetitConfirmation'))
+  .get('/recipetitEdit', (req, res) => res.render('pages/recipetitEdit'))
+  .get('/recipetitReview', (req, res) => res.render('pages/recipetitReview'))
+  .get('/recipetitReviewAdd', (req, res) => res.render('pages/recipetitReviewAdd'))
+  .get('/recipetitView', (req, res) => res.render('pages/recipetitView'))
+  .get('/recipetitViewRecipe', (req, res) => res.render('pages/recipetitViewRecipe'))
+  .get('/recipetitEdit', (req, res) => res.render('pages/reviewEdit'))
+  .get('/shoppingcart', (req, res) => res.render('pages/shoppingcart'))
+  .get('/update_recipe', (req, res) => res.render('pages/update_recipe'))
+  
+
+
+  .get('/', function(req, res) {
+    var recipes = [
+        { name: 'Fake Cookies', cookTime: 3, temp: 350, ingredients: 'testing ingredients, sugar, water, oil', instructions: 'testing instructions, cook for, etc....' },
+        { name: 'Fake Cookies2', cookTime: 3, temp: 350, ingredients: 'testing ingredients, sugar, water, oil', instructions: 'testing instructions, cook for, etc....' },
+        { name: 'Fake Cookies3', cookTime: 3, temp: 350, ingredients: 'testing ingredients, sugar, water, oil', instructions: 'testing instructions, cook for, etc....' }
+    ];
+
+    res.render('pages/recipetitView', {
+        recipes: recipes
+       
+    });
+});
 
   .listen(PORT, () => console.log(`Listening on ${ PORT }`))
 
