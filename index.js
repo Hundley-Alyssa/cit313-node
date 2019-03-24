@@ -30,7 +30,19 @@ express()
   
 
 
+.get('/recipetitView', function(req, res) {
+    var recipes = [
+        { name: 'Bloody Mary', drunkness: 3 },
+        { name: 'Martini', drunkness: 5 },
+        { name: 'Scotch', drunkness: 10 }
+    ];
+    
 
+    res.render('pages/recipetitView', {
+        recipes: recipes
+        
+    });
+});
 //   .get('/', function(req, res) {
 //     var recipes = [
 //         { name: 'Fake Cookies', cookTime: 3, temp: 350, ingredients: 'testing ingredients, sugar, water, oil', instructions: 'testing instructions, cook for, etc....' },
