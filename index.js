@@ -37,7 +37,7 @@ express()
         { name: 'Fake Cookies3', cookTime: 3, temp: 350, ingredients: 'testing ingredients, sugar, water, oil', instructions: 'testing instructions, cook for, etc....' }
     ];
 
-    res.render('pages/recipetitView', {
+    res.render('pages/homepage', {
         recipes: recipes
        
     });
