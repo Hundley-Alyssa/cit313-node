@@ -36,7 +36,8 @@ $instructions = $recipe_rows[0]['instructions'];
 
     <title>CS 313 | SHOPPING</title>
     <meta charset="utf-8" />
-    <link href="myhome.css" type="text/css" rel="stylesheet" />
+    <base href="/"> 
+    <link  type="text/css" rel="stylesheet" href="/stylesheets/myhome.css"/>
     <link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300" rel="stylesheet">
 
 </head>
@@ -44,13 +45,13 @@ $instructions = $recipe_rows[0]['instructions'];
 <body>
 
     
-     <?php include ("recipetitheader.php"); ?>         
+     <% include ../partials/recipetitheader.ejs %>
 
 
     <main>
         <div>
 
-            <?php include ("recipetitnav.php"); ?> 
+            <% include ../partials/recipetitnav.ejs %>
         </div>
 
         <h1 class="recipeHeader">Update Recipe</h1>
@@ -86,7 +87,7 @@ $instructions = $recipe_rows[0]['instructions'];
 
     <footer>
 
-        <?php include ("recipetitfooter.php"); ?> 
+         <% include ../partials/recipetitfooter.ejs %>
           
     </footer>
 

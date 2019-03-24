@@ -17,7 +17,8 @@ $recipes = $stmt->fetchALL(PDO::FETCH_ASSOC);
 
     <title>CS 313 | SHOPPING</title>
     <meta charset="utf-8" />
-    <link href="myhome.css" type="text/css" rel="stylesheet" />
+     <base href="/"> 
+    <link  type="text/css" rel="stylesheet" href="/stylesheets/myhome.css"/>
     <link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300" rel="stylesheet">
 
 </head>
@@ -25,42 +26,29 @@ $recipes = $stmt->fetchALL(PDO::FETCH_ASSOC);
 <body>
 
     
-     <?php include ("recipetitheader.php"); ?>         
+    <% include ../partials/recipetitheader.ejs %>
+     
 
 
     <main>
         <div>
 
-            <?php include ("recipetitnav.php"); ?> 
+             <% include ../partials/recipetitnav.ejs %>
+
+            
         </div>
 
         <h1 class="recipeHeader">Click on a recipe name to view full recipe</h1>
         
 
-       <!--  <ul>
+        <ul>
             <% recipes.forEach(function(recipe) { %>
             <li><%= recipe.name %></li>
             <% }); %>
-        </ul> -->
+        </ul>
 
 
-        <?php
-        
-                foreach ($recipes as $recipe)
-             {
-                
-                $recipe_id = $recipe['id'];
-                $name = $recipe['name'];
-                $cookTime = $recipe['cook_time'];
-                $cookTime = $recipe['oven_temp'];
-                $cookTime = $recipe['ingredients'];
-                $cookTime = $recipe['instructions'];
-                echo "<li class='recipeNameView'><p><a href='recipetitViewRecipe.php?recipe_id=$recipe_id'>$name</p></li>";
-                
-         
-             }
-             
-        ?>
+       
 
 
     </main>
@@ -69,8 +57,8 @@ $recipes = $stmt->fetchALL(PDO::FETCH_ASSOC);
 
     <footer>
 
-        <?php include ("recipetitfooter.php"); ?> 
-          
+ <% include ../partials/recipetitfooter.ejs %>
+       
     </footer>
 
 </body>
